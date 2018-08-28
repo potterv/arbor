@@ -19,7 +19,7 @@
     <script type="text/javascript" src={{url_for('static',filename="style/js/jquery.jcarousel.js")}}></script>
     <script type="text/javascript" src={{url_for('static',filename="style/js/jquery.prettyPhoto.js")}}></script>
     <script type="text/javascript" src={{url_for('static',filename="style/js/carousel.js")}}></script>
-    <script type="text/javascript" src={{url_for('static',filename="style/js/jquery.flexslider-min.js")}}></script>
+   <!-- <script type="text/javascript" src={{url_for('static',filename="style/js/jquery.flexslider-min.js")}}></script> -->
     <script type="text/javascript" src={{url_for('static',filename="style/js/jquery.masonry.min.js")}}></script>
     <script type="text/javascript" src={{url_for('static',filename="style/js/jquery.slickforms.js")}}></script>
 </head>
@@ -28,7 +28,11 @@
 {% block roof %}
     <!-- Begin Sidebar -->
 	<div id="sidebar">
-		 <div id="logo"><a href="index.html"><img src={{url_for('static',filename="style/images/logo1.png")}} alt="GBP" /></a></div>
+		 <div id="logo">
+			 <a href="index.html">
+			 	<img src={{url_for('static',filename="style/images/logo3.png")}} alt="Графические Бизнес Процессы КС" />
+			 </a>
+		 </div>
 
 	<!-- Begin Menu -->
     <div id="menu" class="menu-v">
