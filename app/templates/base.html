@@ -28,28 +28,28 @@
 {% block roof %}
     <!-- Begin Sidebar -->
 	<div id="sidebar">
-		 <div id="logo"><a href="index.html"><img src={{url_for('static',filename="style/images/logo.png")}} alt="Caprice" /></a></div>
+		 <div id="logo"><a href="index.html"><img src={{url_for('static',filename="style/images/logo1.png")}} alt="GBP" /></a></div>
 
 	<!-- Begin Menu -->
     <div id="menu" class="menu-v">
       <ul>
-        <li><a href="index.html" class="active">Home</a>
+        <li><a href="index.html" class="active">Главная</a>
         	<ul>
-        		<li><a href="index.html">Home w/ Carousel</a></li>
-        		<li><a href="index2.html">Home w/ Portfolio</a></li>
-        		<li><a href="index3.html">Home w/ Testimonials</a></li>
+        		<li><a href="#">Home w/ Carousel</a></li>
+        		<li><a href="#">Home w/ Portfolio</a></li>
+        		<li><a href="#">Home w/ Testimonials</a></li>
         	</ul>
         </li>
-        <li><a href="portfolio.html">Portfolio</a>
+        <li><a href="portfolio.html">Процессы</a>
         	<ul>
-        		<li><a href="portfolio.html">Portfolio 4 Columns</a></li>
-        		<li><a href="portfolio2.html">Portfolio 3 Columns</a></li>
-        		<li><a href="portfolio3.html">Portfolio 2 Columns</a></li>
-        		<li><a href="portfolio4.html">Portfolio 1 Column</a></li>
-        		<li><a href="portfolio-post.html">Portfolio Post</a></li>
+        		<li><a href="#">Portfolio 4 Columns</a></li>
+        		<li><a href="#">Portfolio 3 Columns</a></li>
+        		<li><a href="#">Portfolio 2 Columns</a></li>
+        		<li><a href="#">Portfolio 1 Column</a></li>
+        		<li><a href="#">Portfolio Post</a></li>
         	</ul>
         </li>
-        <li><a href="blog.html">Blog</a>
+        <li><a href="blog.html">Документы</a>
         	<ul>
         		<li><a href="blog.html">Blog</a></li>
         		<li><a href="blog2.html">Blog w/ Sidebar</a></li>
@@ -57,7 +57,7 @@
         		<li><a href="post2.html">Post w/ Sidebar</a></li>
         	</ul>
         </li>
-        <li><a href="buttons-boxes-images.html">Features</a>
+        <li><a href="buttons-boxes-images.html">Обнавления</a>
         	<ul>
         		<li><a href="buttons-boxes-images.html">Buttons Boxes Images</a></li>
         		<li><a href="tabs-toggle-table.html">Tabs Toggle Tables</a></li>
@@ -66,7 +66,7 @@
         		<li><a href="service-icons.html">Service Icons</a></li>
         	</ul>
         </li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Для связи</a></li>
       </ul>
     </div>
     <!-- End Menu -->
@@ -145,7 +145,7 @@
 e<div class="clear"></div>
 <script type="text/javascript" src={{url_for('static',filename="style/js/scripts.js")}}></script>
 <!--[if !IE]> -->
-<script type="txt/javascript" src="style/js/jquery.corner.js"></script>
+<script type="txt/javascript" src={{url_for('static',filename="style/js/jquery.corner.js")}}></script>
 <!-- <![endif]-->
 </body>
 </html>

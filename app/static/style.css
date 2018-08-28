@@ -701,8 +701,8 @@ pre {
 }
 
 .flexslider {
-	width: 700px;
-	height: 380px;
+	width: 550px;
+	height: 280px;
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
@@ -711,8 +711,8 @@ pre {
 	display: none;
 }
 .flexslider .slides img {
-	width: 700px;
-	height: auto;
+	width: 550px;
+	height: 280px;
 	display: block;
 }
 .flex-pauseplay span {
