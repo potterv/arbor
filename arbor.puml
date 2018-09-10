@@ -1,5 +1,13 @@
 @startuml
-
+skinparam {
+FontName Impact
+FontSize 40
+actorFontSize 40
+usecaseFontSize 40
+packageFontSize 40
+componentFontSize 40
+databaseFontSize 40
+}
 :Администратор:as A
 :Специалисты:as SKS
 :Рководители:as RKS
@@ -17,10 +25,10 @@ package "Веб приложение arbor" as wapp{
 
 
 
-A ------down-> login
-RKS -----down-> login
-SKS .....down.>  login
-AMRU-----down-> login
+A ----down-> login
+RKS ----down-> login
+SKS ....down.>  login
+AMRU----down-> login
 
 
 
@@ -32,7 +40,7 @@ login ......> dds: Специалист КС в системе не регист
 }
 
 package "полномочия Руководителя после входа" as prpin{
-login-------> prpin
+login----====> prpin
 (создание заявок на создание / дороботку процессов)
 (отправка заявок в профильнй отдел в отделении)
 prpin------>dds
@@ -41,15 +49,15 @@ package "полномочия администратора после входа
 login-------> papin
 (создание / удаление пользователей, назначениние ролей пользователю)-up->(Панель администратора)
 (управление ролями)-up->(Панель администратора)
-papin------>dds
+papin--l--====>dds
 
 }
 
 package "полномочия автоматизаторов МРУ после входа" as pamru {
-login-------> pamru
-(создание / удаление пользователей, назначениние ролей пользователю)-up->(Панель администратора МРУ)
+login---l----> pamru
+(создание / удаление пользователей, назначениние ролей пользователю)-up====->(Панель администратора МРУ)
 (просмотр заявок и их отработка)-up->(Панель администратора МРУ)
-pamru----left->dds
+pamru----left-===>dds
 
 }
 
@@ -62,15 +70,16 @@ package "база данных для веб приложения" as bd{
   -------------------
   База содержит информацию о пользователях, процессах
   "
-wapp-----l->bd
-bd------>wapp
+
+
+bd<-----==l===---==>wapp
 }
 
 
 
 
-wapp-->[web-сервер]
-[python3,  flask - webframework]-->[web-сервер]
-
+wapp<-==->[web-сервер]
+[python3,  flask - webframework]<-=->[web-сервер]
+[python3,  flask - webframework]<====>bd
 
 @enduml
