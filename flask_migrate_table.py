@@ -1,15 +1,26 @@
-import os
+#!d:\PycharmProjects\arbor\venv\Scripts\python
 import subprocess
 from arbor.app.models.dbModel import Employee
+from arbor.app import Config
+
+import os
+
+
+
 tables=['Employee']
 
+
+
 def dbUpgrade(*tables):
-    proc = subprocess.Popen("export FLASK_APP=mainArbor.py", shell=True, stdout=subprocess.PIPE)
+
+ '''
+    proc = subprocess.Popen("cmd \"set FLASK_APP\"", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
     print(out)
+ '''
 
-    for table in tables:
 
+ for table in tables:
         proc = subprocess.Popen("flask db migrate -m  \""+str(table)+" table\"", shell=True, stdout=subprocess.PIPE)
         out = proc.stdout.readlines()
         print(out)
