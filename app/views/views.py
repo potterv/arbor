@@ -1,12 +1,12 @@
 from flask import render_template, flash, redirect
 from arbor.app import app
-from arbor.app.AuthForm import LoginForm
+from arbor.app.models.AuthForm import LoginForm
 #@app.route('/')
 @app.route('/arbor')
 def arbor():
    # print(app.config['SECRET_KEY'])
    return render_template('arbor.html')
-
+@app.route('/')
 @app.route('/login',methods=['GET', 'POST'])
 def login():
     form = LoginForm()
